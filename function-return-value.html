@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sayHello(firstName, lastName){
+            const say = `Hello ${firstName} ${lastName}`
+            return say
+        }
+
+        const result = sayHello("Eko", "Khannedy")
+        document.writeln(`<p>${result}</p>`)
+
+        function getFinalValue(value){
+            if (value > 90){
+                return "A"
+            }
+            else {
+                return "Tidak Lulus"
+            }
+        }
+        const finalValue = getFinalValue(80)
+        document.writeln(finalValue)
+
+        function isContains(array, searchValue) {
+            for (const element of array){
+                console.info(`Iterasi Element ${element}`)
+                if (element === searchValue) {
+                    return searchValue
+                }
+            } 
+            return("Data Tidak Ditemukan")
+        }
+        const array = ["Handphone", "Computer","Motor"]
+        const search = "Computer"
+        const found = isContains(array, search)
+        document.writeln(`<p>${found}</p>`)
+    </script>
+</body>
+</html>
