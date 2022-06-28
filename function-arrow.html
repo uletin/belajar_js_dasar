@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const sayHello = (name) => {
+        //     const say = `Hello ${name}`
+        //     console.info(say)
+        // }
+
+        // Tanpa Kurung Kurawal
+        const sayHello = (name) => console.info(`Hello ${name}`)
+
+        // const sum = (first, second) => first + second
+
+        // const sum = (first, second) => {
+        //     return first + second
+        // }
+
+        const sum = (first, second) => first + second
+
+        const sayHai = name => console.info(`Say ${name}`)
+
+        function giveMeName(callback){
+            callback("Eko")
+        }
+
+        // Anonymous Function
+        giveMeName(function (name){
+           console.info(`Hello ${name}`)
+        })
+
+        //Arrow Function
+        giveMeName(name => console.info(`Hello ${name}`))
+
+
+
+        sayHello("Eko")
+        console.info(sum(30, 20))
+        console.info(sayHai("Yeay"))
+    </script>
+</body>
+</html>

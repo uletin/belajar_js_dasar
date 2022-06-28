@@ -19,6 +19,7 @@
             console.log(name)
         }
 
+        //Lazy
         function* buatGanjil(value){
             for (let i = 1; i < value; i++){
                 if(i%2 === 1){
@@ -28,10 +29,25 @@
             }
         }
 
-        const numbers = buatGanjil(100)
-        for (const number of numbers){
-            console.info(number)
+        //Eager
+        function buatGanjilArray(value){
+            const result = []
+            for(let i = 1; i < value; i++){
+                if(i%2 === 1){
+                    console.info(`yield ${i}`)
+                    result.push(i)
+                }
+            }
+            return result
         }
+
+        const numbers = buatGanjil(100)
+        // for (const number of numbers){
+        //     console.info(number)
+        // }
+        
+        console.info(numbers.next().value)
+        
     </script>
 </body>
 </html>
