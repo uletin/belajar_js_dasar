@@ -20,16 +20,17 @@
             inner()
         }
 
+        sample()
+
         const person = {
             name: "Eko",
-            sayHello: function (name){
-                console.info(this)
+            sayHello: function (value){
+                console.info(`Hello ${value} My Name is ${this.name}`)
             }
         }
 
         person.sayHello("Budi")
-
-        sample()
+        person.sayHello("Joko")
     </script>
 </body>
 </html>
