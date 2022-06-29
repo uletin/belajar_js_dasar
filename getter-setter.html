@@ -8,7 +8,26 @@
 </head>
 <body>
     <script>
-        
+        const person = {
+            firstName : "Eko",
+            lastName : "Kurniawan",
+            // get berfungsi untuk mengambil data, tidak perlu menggunakan parameter
+            get fullName(){
+                return (`${this.firstName} ${this.lastName}`)
+            },
+            set fullName(value){
+                const array = value.split(" ")
+                this.firstName = array[0]
+                this.lastName = array[1]
+                // console.info(`Ubah Full Name ${value}` )
+            }      
+        }
+
+        person.fullName = "Budi Nugraha"
+        console.table(person)
+
+        person.fullName = "Joko Morro"
+        console.table(person)
     </script>
 </body>
 </html>
