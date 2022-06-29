@@ -82,6 +82,7 @@
         {
             const person = {
             firstName : "Eko",
+            middleName : "Budi",
             lastName : "Khannedy",
             address : {
                 street : "Jalan Belum ada",
@@ -92,14 +93,25 @@
             channel : "Programmer Zaman Now",
             }
 
-            const {firstName, lastName, address: {city, street, country}, ...others} = person
+            let {firstName, middleName = "Kurniawan", lastName} = person
             console.info(firstName)
+            console.info(middleName)
             console.info(lastName)
-            console.info(city)
-            console.info(street)
-            console.info(country)
-            console.info(others)
+        }
 
+        {
+            const person = {
+            firstName : "Eko",
+            middleName : "Budi",
+            lastName : "Khannedy",
+            }
+
+            let {firstName : namaDepan, 
+                middleName : namaTengah = "Kurniawan", 
+                lastName : namaBelakang} = person
+            console.info(namaDepan)
+            console.info(namaTengah)
+            console.info(namaBelakang)
         }
 
         
